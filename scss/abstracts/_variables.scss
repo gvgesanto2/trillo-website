@@ -1,21 +1,4 @@
-/*
-COLORS
-
-Primary: #eb2f64
-Primary light: #FF3366
-Primary dark: #BA265D
-
-Grey light 1: #faf9f9
-Grey light 2: #f4f2f2
-Grey light 3: #f0eeee
-Grey light 4: #ccc
-
-Grey dark 1: #333
-Grey dark 2: #777
-Grey dark 3: #999
-
-*/
-
+// COLORS
 $primary-color: #eb2f64;
 $primary-color-light: #ff3366;
 $primary-color-dark: #ba265d;
@@ -28,3 +11,8 @@ $light-grey-color-4: #ccc;
 $dark-grey-color-1: #333;
 $dark-grey-color-2: #777;
 $dark-grey-color-3: #999;
+
+$default-text-color: #777;
+
+// Shadow
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);

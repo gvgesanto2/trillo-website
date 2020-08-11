@@ -2,4 +2,14 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  color: $dark-grey-color-2;
+
+  min-height: 100vh;
+
+  background: linear-gradient(
+      to right bottom,
+      $primary-color-light,
+      $primary-color-dark
+    )
+    no-repeat center center / cover;
 }
