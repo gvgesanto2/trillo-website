@@ -1,0 +1,17 @@
+@mixin centerFlexElem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin roundElem($width) {
+  width: $width;
+  height: $width;
+  border-radius: 50%;
+}
+
+@mixin inheritFontProps {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}

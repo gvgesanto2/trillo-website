@@ -1,0 +1,51 @@
+.search {
+  flex: 0 0 40%;
+
+  @include centerFlexElem;
+
+  &__input {
+    @include inheritFontProps;
+    background: $light-grey-color-2;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    margin-right: -3.5rem;
+    transition: all 0.2s;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background: $light-grey-color-3;
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: $light-grey-color-4;
+    }
+  }
+
+  &__input:focus + &__button {
+    background: $light-grey-color-3;
+  }
+
+  &__button {
+    border: none;
+    background: $light-grey-color-2;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $dark-grey-color-3;
+  }
+}

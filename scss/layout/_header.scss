@@ -1,4 +1,16 @@
 .header {
   height: 7rem;
+  font-size: 1.4rem;
   background: #fff;
+  border-bottom: $line;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    height: 3.25rem;
+    width: auto;
+    margin-left: 2rem;
+  }
 }
