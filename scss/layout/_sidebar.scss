@@ -1,5 +1,9 @@
 .sidebar {
   flex: 0 0 18%;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   background: $dark-grey-color-1;
 }

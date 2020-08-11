@@ -1,3 +1,4 @@
+// Resetting
 *,
 *::before,
 *::after {
@@ -6,10 +7,12 @@
   padding: 0;
 }
 
+// Setting the value of 1rem
 html {
   font-size: 62.5%; // 1rem = 10px
 }
 
+// Basic styles
 a {
   text-decoration: none;
   color: $default-text-color;

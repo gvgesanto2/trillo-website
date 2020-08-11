@@ -26,6 +26,12 @@ body {
   min-height: 100vh;
   background: linear-gradient(to right bottom, #ff3366, #ba265d) no-repeat center center/cover; }
 
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #ccc;
+  padding: 2.5rem; }
+
 .search {
   flex: 0 0 40%;
   display: flex;
@@ -63,6 +69,42 @@ body {
     height: 2rem;
     width: 2rem;
     fill: #999; }
+
+.side-nav {
+  font-size: 1.4rem;
+  margin-top: 3.5rem; }
+  .side-nav__item {
+    position: relative; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: 0.5rem; }
+    .side-nav__item::before {
+      content: '';
+      width: 3px;
+      height: 100%;
+      background-color: #eb2f64;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+    .side-nav__item:hover::before, .side-nav__item--active::before {
+      width: 100%;
+      transform: scaleY(1); }
+    .side-nav__item:active::before {
+      background-color: #ff3366; }
+  .side-nav__link {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #faf9f9;
+    position: relative;
+    padding: 1.5rem 3rem;
+    z-index: 10; }
+  .side-nav__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: currentColor;
+    margin-right: 2rem; }
 
 .user-nav {
   align-self: stretch;
@@ -130,4 +172,7 @@ body {
 
 .sidebar {
   flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #333; }

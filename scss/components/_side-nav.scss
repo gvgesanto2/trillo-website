@@ -1,0 +1,54 @@
+// Side navigation
+.side-nav {
+  font-size: 1.4rem;
+  margin-top: 3.5rem;
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    &::before {
+      content: '';
+      width: 3px;
+      height: 100%;
+      background-color: $primary-color;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+        background-color 0.1s;
+    }
+
+    &:hover::before,
+    &--active::before {
+      width: 100%;
+      transform: scaleY(1);
+    }
+
+    &:active::before {
+      background-color: $primary-color-light;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    text-transform: uppercase;
+    color: $light-grey-color-1;
+    position: relative;
+    padding: 1.5rem 3rem;
+    z-index: 10;
+  }
+
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: currentColor;
+    margin-right: 2rem;
+  }
+}
