@@ -1,0 +1,30 @@
+// Button Inline
+.btn-inline {
+  display: inline-block;
+  font-size: inherit;
+  color: $primary-color;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  & span {
+    margin-left: 3px;
+    transition: margin-left 0.2s;
+  }
+
+  &:hover {
+    color: $dark-grey-color-1;
+
+    span {
+      margin-left: 8px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}

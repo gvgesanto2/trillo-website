@@ -1,8 +1,7 @@
 .container {
   max-width: 120rem;
-  margin: 8rem auto;
-  background: $light-grey-color-2;
+  // min-height: 50rem;
+  background: $light-grey-color-1;
   box-shadow: $shadow-dark;
-
-  min-height: 50rem;
+  margin: 8rem auto;
 }

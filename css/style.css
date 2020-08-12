@@ -1,3 +1,14 @@
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }
+
 *,
 *::before,
 *::after {
@@ -25,6 +36,73 @@ body {
   color: #777;
   min-height: 100vh;
   background: linear-gradient(to right bottom, #ff3366, #ba265d) no-repeat center center/cover; }
+
+.btn-inline {
+  display: inline-block;
+  font-size: inherit;
+  color: #eb2f64;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left 0.2s; }
+  .btn-inline:hover {
+    color: #333; }
+    .btn-inline:hover span {
+      margin-left: 8px; }
+  .btn-inline:focus {
+    outline: none;
+    animation: pulsate 1s infinite; }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    display: block; }
+
+.hotel-overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f4f2f2; }
+  .hotel-overview__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem; }
+  .hotel-overview__stars {
+    display: flex;
+    margin-right: auto; }
+  .hotel-overview__icon-star, .hotel-overview__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: #eb2f64; }
+  .hotel-overview__location {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem; }
+  .hotel-overview__icon-location {
+    margin-right: 0.5rem; }
+  .hotel-overview__rating {
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    background: #eb2f64;
+    margin-left: 3rem;
+    padding: 0 2.25rem; }
+  .hotel-overview__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -3px; }
+  .hotel-overview__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase; }
 
 .legal {
   font-size: 1.2rem;
@@ -145,10 +223,9 @@ body {
 
 .container {
   max-width: 120rem;
-  margin: 8rem auto;
-  background: #f4f2f2;
+  background: #faf9f9;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  min-height: 50rem; }
+  margin: 8rem auto; }
 
 .content {
   display: flex; }
@@ -168,7 +245,7 @@ body {
 
 .hotel-view {
   flex: 1;
-  background-color: orangered; }
+  background-color: #fff; }
 
 .sidebar {
   flex: 0 0 18%;

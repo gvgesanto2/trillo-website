@@ -1,0 +1,8 @@
+// Gallery of pictures
+.gallery {
+  display: flex;
+
+  &__photo {
+    display: block;
+  }
+}
