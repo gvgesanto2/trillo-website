@@ -34,8 +34,11 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: #777;
-  min-height: 100vh;
+  height: 100%;
   background: linear-gradient(to right bottom, #ff3366, #ba265d) no-repeat center center/cover; }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
 
 .btn-inline {
   display: inline-block;
@@ -109,6 +112,90 @@ body {
   text-align: center;
   color: #ccc;
   padding: 2.5rem; }
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #f4f2f2;
+  border-bottom: 1px solid #f4f2f2;
+  padding: 3rem 0;
+  margin: 3rem 0; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem; }
+  .list__item::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    -webkit-mask-image: url("../img/chevron-thin-right.svg");
+    -webkit-mask-size: cover;
+    mask-image: url("../img/chevron-thin-right.svg");
+    mask-size: cover;
+    background-color: #eb2f64;
+    margin-right: 0.7rem; }
+
+.recommend {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  color: #999; }
+  .recommend__count {
+    margin-right: auto; }
+  .recommend__friends {
+    display: flex; }
+  .recommend__photo {
+    box-sizing: content-box;
+    width: 4rem;
+    height: 4rem;
+    border: 3px solid #fff;
+    border-radius: 50%; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -2rem; }
+
+.review {
+  background: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  position: relative;
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  overflow: hidden; }
+  .review::before {
+    content: '\201C';
+    font-family: sans-serif;
+    font-size: 20rem;
+    line-height: 1;
+    color: #f4f2f2;
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    z-index: 1; }
+  .review__text {
+    position: relative;
+    margin-bottom: 2rem;
+    z-index: 10; }
+  .review__user {
+    display: flex;
+    align-items: center; }
+  .review__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem; }
+  .review__user-box {
+    margin-right: auto; }
+  .review__user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem; }
+  .review__user-date {
+    font-size: 1rem;
+    color: #999; }
+  .review__rating {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #eb2f64; }
 
 .search {
   flex: 0 0 40%;
@@ -230,6 +317,20 @@ body {
 .content {
   display: flex; }
 
+.description {
+  flex: 0 0 60%;
+  background: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  padding: 3rem;
+  margin-right: 4.5rem; }
+
+.detail {
+  display: flex;
+  font-size: 1.4rem;
+  background: #faf9f9;
+  border-bottom: 1px solid #f4f2f2;
+  padding: 4.5rem; }
+
 .header {
   height: 7rem;
   font-size: 1.4rem;
@@ -253,3 +354,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background: #333; }
+
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }

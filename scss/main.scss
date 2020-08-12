@@ -11,12 +11,18 @@
 @import 'components/gallery';
 @import 'components/hotel-overview';
 @import 'components/legal';
+@import 'components/list';
+@import 'components/recommend';
+@import 'components/review';
 @import 'components/search';
 @import 'components/side-nav';
 @import 'components/user-nav';
 
 @import 'layout/container';
 @import 'layout/content';
+@import 'layout/description';
+@import 'layout/detail';
 @import 'layout/header';
 @import 'layout/hotel-view';
 @import 'layout/sidebar';
+@import 'layout/user-reviews';

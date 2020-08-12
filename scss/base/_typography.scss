@@ -4,7 +4,7 @@ body {
   line-height: 1.6;
   color: $dark-grey-color-2;
 
-  min-height: 100vh;
+  height: 100%;
 
   background: linear-gradient(
       to right bottom,
@@ -12,4 +12,9 @@ body {
       $primary-color-dark
     )
     no-repeat center center / cover;
+}
+
+// Paragraph
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
 }
