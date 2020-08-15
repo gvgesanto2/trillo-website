@@ -1,7 +1,13 @@
 .container {
   max-width: 120rem;
-  min-height: 50rem;
+  // min-height: 50rem;
   background: $light-grey-color-1;
   box-shadow: $shadow-dark;
   margin: 8rem auto;
+
+  @include respond(screen-hg) {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
 }

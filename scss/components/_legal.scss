@@ -4,4 +4,8 @@
   text-align: center;
   color: $light-grey-color-4;
   padding: 2.5rem;
+
+  @include respond(screen-md) {
+    display: none;
+  }
 }

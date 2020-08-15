@@ -5,4 +5,13 @@
   box-shadow: $shadow-light;
   padding: 3rem;
   margin-right: 4.5rem;
+
+  @include respond(screen-md) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+  @include respond(screen-sm) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
 }

@@ -15,3 +15,41 @@
   font-size: inherit;
   color: inherit;
 }
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == screen-xxsm {
+    @media only screen and (max-width: $screen-xxsm) {
+      @content;
+    }
+  }
+  @if $breakpoint == screen-xsm {
+    @media only screen and (max-width: $screen-xsm) {
+      @content;
+    }
+  }
+  @if $breakpoint == screen-sm {
+    @media only screen and (max-width: $screen-sm) {
+      @content;
+    }
+  }
+  @if $breakpoint == screen-md {
+    @media only screen and (max-width: $screen-md) {
+      @content;
+    }
+  }
+  @if $breakpoint == screen-lg {
+    @media only screen and (max-width: $screen-lg) {
+      @content;
+    }
+  }
+  @if $breakpoint == screen-xlg {
+    @media only screen and (max-width: $screen-xlg) {
+      @content;
+    }
+  }
+  @if $breakpoint == screen-hg {
+    @media only screen and (max-width: $screen-hg) {
+      @content;
+    }
+  }
+}

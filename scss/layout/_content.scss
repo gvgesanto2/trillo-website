@@ -1,3 +1,7 @@
 .content {
   display: flex;
+
+  @include respond(screen-md) {
+    flex-direction: column;
+  }
 }

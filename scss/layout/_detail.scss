@@ -4,4 +4,12 @@
   background: $light-grey-color-1;
   border-bottom: $line;
   padding: 4.5rem;
+
+  @include respond(screen-md) {
+    padding: 3rem;
+  }
+
+  @include respond(screen-sm) {
+    flex-direction: column;
+  }
 }

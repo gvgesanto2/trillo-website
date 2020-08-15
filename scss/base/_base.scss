@@ -10,6 +10,19 @@
 // Setting the value of 1rem
 html {
   font-size: 62.5%; // 1rem = 10px
+
+  @include respond(screen-xlg) {
+    font-size: 56.25%;
+  }
+
+  @include respond(screen-lg) {
+    font-size: 52.25%;
+  }
+
+  @include respond(screen-md) {
+    font-size: 50%;
+    height: 100%;
+  }
 }
 
 // Basic styles
