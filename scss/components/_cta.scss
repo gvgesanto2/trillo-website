@@ -3,10 +3,23 @@
   text-align: center;
   padding: 3.5rem;
 
+  @include respond(screen-md) {
+    padding: 2.5rem 0;
+  }
+
   &__book-now {
     font-size: 2rem;
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 2.5rem;
+
+    @include respond(screen-sm) {
+      font-size: 1.75rem;
+    }
+
+    @include respond(screen-xsm) {
+      font-size: 1.65rem;
+      padding: 0 2.5rem;
+    }
   }
 }

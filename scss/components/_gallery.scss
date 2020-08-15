@@ -5,4 +5,16 @@
   &__photo {
     display: block;
   }
+
+  @include respond(screen-sm) {
+    &__item:first-child {
+      display: none;
+    }
+  }
+
+  @include respond(screen-xxsm) {
+    &__item:last-child {
+      display: none;
+    }
+  }
 }

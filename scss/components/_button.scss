@@ -15,6 +15,10 @@
   overflow: hidden;
   cursor: pointer;
 
+  @include respond(screen-sm) {
+    font-size: 1.4rem;
+  }
+
   & > * {
     display: inline-block;
     width: 100%;
@@ -24,6 +28,14 @@
 
   &__visible {
     padding: 2rem 7.5rem;
+
+    @include respond(screen-sm) {
+      padding: 1.8rem 6.75rem;
+    }
+
+    @include respond(screen-xxsm) {
+      padding: 1.62rem 6.07rem;
+    }
   }
 
   &__invisible {

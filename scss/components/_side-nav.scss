@@ -3,11 +3,28 @@
   font-size: 1.4rem;
   margin-top: 3.5rem;
 
+  @include respond(screen-md) {
+    display: flex;
+    margin: 0;
+  }
+
+  @include respond(screen-xsm) {
+    font-size: 1.2rem;
+  }
+
   &__item {
     position: relative;
 
+    @include respond(screen-md) {
+      flex: 1;
+    }
+
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+
+      @include respond(screen-md) {
+        margin: 0;
+      }
     }
 
     &::before {
@@ -21,12 +38,26 @@
       transform: scaleY(0);
       transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
         background-color 0.1s;
+
+      @include respond(screen-md) {
+        width: 100%;
+        height: 3px;
+        transform: scaleY(1);
+        transform: scaleX(0);
+        transition: transform 0.2s, height 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+          background-color 0.1s;
+      }
     }
 
     &:hover::before,
     &--active::before {
       width: 100%;
       transform: scaleY(1);
+
+      @include respond(screen-md) {
+        height: 100%;
+        transform: scaleX(1);
+      }
     }
 
     &:active::before {
@@ -43,6 +74,21 @@
     position: relative;
     padding: 1.5rem 3rem;
     z-index: 10;
+
+    @include respond(screen-md) {
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    @include respond(screen-sm) {
+      flex-direction: column;
+      padding: 1.5rem 0.5rem;
+    }
+
+    @include respond(screen-xsm) {
+      flex-direction: column;
+      padding: 1rem 0.3rem;
+    }
   }
 
   &__icon {
@@ -50,5 +96,18 @@
     height: 1.75rem;
     fill: currentColor;
     margin-right: 2rem;
+
+    @include respond(screen-sm) {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+    }
+
+    @include respond(screen-xsm) {
+      width: 1.35rem;
+      height: 1.35rem;
+      margin-bottom: 0.3rem;
+    }
   }
 }

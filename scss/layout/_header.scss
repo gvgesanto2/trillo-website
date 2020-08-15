@@ -8,6 +8,12 @@
   justify-content: space-between;
   align-items: center;
 
+  @include respond(screen-xsm) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
+
   &__logo {
     height: 3.25rem;
     width: auto;

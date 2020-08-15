@@ -3,6 +3,12 @@
 
   @include centerFlexElem;
 
+  @include respond(screen-xsm) {
+    order: 1;
+    flex: 0 0 100%;
+    background: $light-grey-color-2;
+  }
+
   &__input {
     @include inheritFontProps;
     background: $light-grey-color-2;
